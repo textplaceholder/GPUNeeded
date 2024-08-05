@@ -1,2 +1,2 @@
 # GPUNeeded
-Machine learning- AI Adventured
+Machine learning- AI Adventures
