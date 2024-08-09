@@ -1,0 +1,5 @@
+opencv-python
+numpy
+shapely
+ultralytics
+torch 2.3.1
