@@ -1,6 +1,5 @@
 import cv2
 import numpy as np
-from imutils.video import VideoStream
 from yolodetect import YoloDetect
 
 #contain polygon points
@@ -8,8 +7,9 @@ points = []
 
 model = YoloDetect()
 
-video = VideoStream(src=0,resolution=(2560,1600)).start()
-
+video = cv2.VideoCapture(0)
+video.set(cv2.CAP_PROP_FRAME_WIDTH, 2560)
+video.set(cv2.CAP_PROP_FRAME_HEIGHT, 1600)
 
 def handle_left_click(event, x, y, flags, points):
     if event == cv2.EVENT_LBUTTONDOWN:
@@ -26,7 +26,7 @@ def draw_polygon (frame, points):
 detect = False
 
 while True:
-    frame = video.read()
+    retval,frame = video.read()
     frame = cv2.flip(frame, 1)
 
     frame = draw_polygon(frame, points)
