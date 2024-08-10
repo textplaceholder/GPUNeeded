@@ -1,0 +1,7 @@
+train: C:/Users/ADMIN/Downloads/projects/projects/face-recog/dataset/images/train
+val: C:/Users/ADMIN/Downloads/projects/projects/face-recog/dataset/images/val
+
+nc: 1
+
+names: 
+  0: Person
