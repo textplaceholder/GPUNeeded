@@ -8,9 +8,9 @@ model = YOLO('trained_model.pt')
 
 model.train(
     data='data.yaml',
-    epochs=200,                
+    epochs=100,                
     imgsz=640,                 
-    batch=50,                  
+    batch=32,                  
     name='trained_model'
 )
 
