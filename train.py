@@ -11,7 +11,7 @@ model.train(
     epochs=200,                
     imgsz=640,                 
     batch=50,                  
-    name='intruder_detection'
+    name='trained_model'
 )
 
 """
